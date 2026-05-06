@@ -8,11 +8,13 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 8787;
 
-app.use(
-  cors({
-    origin: ["http://localhost:5173", "http://localhost:5174"],
-  }),
-);
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'http://localhost:5174',
+    'https://rita-splaash-receptionist.netlify.app',
+  ],
+}));
 
 app.use(express.json());
 
