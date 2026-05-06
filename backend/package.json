@@ -1,0 +1,20 @@
+{
+  "name": "splaash-rita-backend",
+  "version": "1.0.0",
+  "description": "Backend for Splaash Rita AI voice receptionist using Retell",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "keywords": ["retell", "voice-ai", "express", "splaash"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^4.21.2",
+    "retell-sdk": "^5.18.0"
+  }
+}
