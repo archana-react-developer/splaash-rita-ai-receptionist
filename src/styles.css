@@ -1,0 +1,412 @@
+:root {
+  color: #26122f;
+  background: #fff9fb;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  min-height: 100vh;
+}
+
+/* Landing Page */
+
+.hero {
+  padding: 28px clamp(18px, 5vw, 72px) 64px;
+  background:
+    radial-gradient(circle at top left, #ffe1f2, transparent 35%),
+    linear-gradient(135deg, #fff7fb, #f3ecff 55%, #effbf6);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 56px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.brand span {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 14px;
+  color: white;
+  background: #a857f1;
+  box-shadow: 0 14px 30px rgba(168, 87, 241, 0.25);
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) 420px;
+  gap: 36px;
+  align-items: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  color: #7b35bf;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 7vw, 78px);
+  line-height: 0.95;
+  letter-spacing: -3px;
+  margin: 18px 0;
+  max-width: 880px;
+}
+
+.subtext {
+  font-size: 20px;
+  line-height: 1.55;
+  color: #60406b;
+  max-width: 690px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 26px;
+}
+
+.center {
+  justify-content: center;
+}
+
+.primary,
+.secondary,
+.button {
+  border: 0;
+  border-radius: 16px;
+  padding: 14px 18px;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  cursor: pointer;
+}
+
+.primary {
+  background: #a857f1;
+  color: white;
+  box-shadow: 0 16px 32px rgba(168, 87, 241, 0.24);
+}
+
+.secondary {
+  background: white;
+  color: #3a2445;
+  border: 1px solid rgba(81, 47, 97, 0.12);
+}
+
+.button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.ritaCard,
+.panel,
+.info {
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(81, 47, 97, 0.1);
+  border-radius: 32px;
+  box-shadow: 0 24px 70px rgba(71, 45, 92, 0.12);
+}
+
+.ritaCard {
+  padding: 28px;
+  text-align: center;
+}
+
+.avatar {
+  width: 84px;
+  height: 84px;
+  margin: 0 auto 16px;
+  display: grid;
+  place-items: center;
+  border-radius: 30px;
+  background: #fff0f8;
+  color: #a857f1;
+}
+
+.ritaCard h1,
+.ritaCard h2,
+.panel h2 {
+  margin: 8px 0 4px;
+  font-size: 28px;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+
+.ritaCard p,
+.panel p,
+.info p {
+  color: #674c70;
+  line-height: 1.45;
+}
+
+.status {
+  display: inline-flex;
+  margin: 10px auto;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #f1e8ff;
+  color: #7b35bf;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.status.live,
+.status.listening,
+.status.connected,
+.status.rita-speaking {
+  background: #ddfbeb;
+  color: #087d47;
+}
+
+.status.error {
+  background: #fff1f0;
+  color: #b42318;
+}
+
+.transcript {
+  min-height: 110px;
+  padding: 16px;
+  margin: 14px 0;
+  text-align: left;
+  background: #fbf7ff;
+  border-radius: 20px;
+  line-height: 1.5;
+  color: #3a2445;
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: #fff1f0;
+  border-radius: 14px;
+  color: #b42318;
+}
+
+.hint {
+  font-size: 14px;
+}
+
+.cards {
+  padding: 36px clamp(18px, 5vw, 72px);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.info {
+  padding: 24px;
+}
+
+.info svg {
+  color: #a857f1;
+}
+
+.info h3 {
+  margin-bottom: 8px;
+}
+
+.split {
+  padding: 22px clamp(18px, 5vw, 72px) 72px;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 22px;
+}
+
+.panel {
+  padding: 28px;
+}
+
+form {
+  display: grid;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  font-weight: 800;
+  color: #3a2445;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid rgba(81, 47, 97, 0.16);
+  border-radius: 16px;
+  padding: 13px 14px;
+  font: inherit;
+  background: #fff;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.recommendation {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  border-radius: 16px;
+  background: #effbf6;
+  padding: 12px;
+  color: #087d47;
+  font-weight: 800;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.metric {
+  background: #fbf7ff;
+  border-radius: 18px;
+  padding: 16px;
+}
+
+.metric strong {
+  display: block;
+  font-size: 28px;
+}
+
+.metric span {
+  color: #674c70;
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th,
+td {
+  text-align: left;
+  border-bottom: 1px solid rgba(81, 47, 97, 0.09);
+  padding: 14px 10px;
+  vertical-align: top;
+}
+
+th {
+  color: #60406b;
+}
+
+small {
+  color: #7f6b87;
+}
+
+.badge {
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #f1e8ff;
+  color: #7b35bf;
+  font-weight: 800;
+}
+
+/* Rita Dedicated Page */
+
+.ritaPage {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 40px 20px;
+  background:
+    radial-gradient(circle at top left, #ffe1f2, transparent 35%),
+    linear-gradient(135deg, #fff7fb, #f3ecff 55%, #effbf6);
+}
+
+.ritaPage .hero {
+  width: 100%;
+  max-width: 560px;
+  padding: 0;
+  background: transparent;
+}
+
+.ritaPage .ritaCard {
+  width: 100%;
+}
+
+.ritaPage h1 {
+  font-size: 36px;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.ritaPage .actions {
+  justify-content: center;
+}
+
+/* Responsive */
+
+@media (max-width: 980px) {
+  .heroGrid,
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .hero h1 {
+    letter-spacing: -1px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+}
